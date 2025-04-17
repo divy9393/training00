@@ -19,12 +19,10 @@
       <a-box position="0 1.5 -3" depth="1" height="1" width="1"
              material="src: #cube-texture; repeat: 1 1;"></a-box>
 
-      <!-- Camera rig with orbit controls -->
-      <a-entity id="cameraRig" position="0 1.6 4"
-                orbit-controls="target: 0 1.5 -3; autoRotate: false; enableDamping: true;
-                                dampingFactor: 0.125; rotateSpeed:0.15; zoomSpeed:0.5;
-                                minDistance: 2; maxDistance: 10;">
-        <a-camera></a-camera>
+      <a-entity id="rig" position="0 1.6 4" movement-controls="fly: true">
+        <a-camera wasd-controls="acceleration: 2" look-controls>
+          <a-cursor fuse="true" material="color: black; shader: flat"></a-cursor>
+        </a-camera>
       </a-entity>
     </a-scene>
   </body>
